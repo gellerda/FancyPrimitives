@@ -48,6 +48,11 @@ namespace FancyPrimitives
             return this.canExecute == null || this.canExecute(parameter);
         }
 
+        public bool CanExecuteProperty
+        {
+            get { return CanExecute(null); }
+        }
+
         public void Execute(object parameter)
         {
             this.execute(parameter);
